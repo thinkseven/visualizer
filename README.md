@@ -8,9 +8,24 @@ const template = `
 
 pm.visualizer.set(template, pm.response.json());
 ```
-
-```json
-    "tailwind:css":"tailwind build src/components/tailwind.src.css -o src/components/tailwind.css",
-    "start": "npm run tailwind:css && cross-env NODE_ENV=development BABEL_ENV=development SIMULATOR=true webpack-dev-server --hot --open",
-    "build": "npm run tailwind:css && cross-env NODE_ENV=production NODE_ENV=production SIMULATOR=false webpack --config webpack.config.js --mode production --watch"
+# changes in postman
+Replace below code between lines 542787 and 542802
+file /Applications/Postman.app/Contents/Resources/app/js/vendor-shared.js
+```javascript
+const data = `
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <!-- <meta http-equiv="Content-Security-Policy" content="${CSP}"> -->
+        <style type="text/css">
+            ${results.styles || E}
+        </style>
+    </head>
+    <body>
+        ${resource || E}
+    </body>
+    </html>
+`;
 ```
