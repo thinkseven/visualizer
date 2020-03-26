@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development BABEL_ENV=development SIMULATOR=true webpack-dev-server --hot --open",
-    "build": "cross-env NODE_ENV=production NODE_ENV=production SIMULATOR=false webpack --config webpack.config.js --mode production --watch"
+    "start": "cross-env NODE_ENV=development BABEL_ENV=development webpack-dev-server --hot --open --verbose",
+    "build": "cross-env NODE_ENV=production NODE_ENV=production webpack --config webpack.config.js --mode production --watch --verbose"
   },
   "keywords": [],
   "author": "",

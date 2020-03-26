@@ -1,6 +1,6 @@
 
-import React, { ReactFragment } from 'react'
-import './Visualizer.css'
+import React from 'react'
+import './index.css'
 
 const Visualizer = (input) => {
     if (input.src == null || input.src.length === 0) {
@@ -13,9 +13,8 @@ const Visualizer = (input) => {
         )
     }
 
-    // CHANGE HERE FOR REAL WORLD EXAMPLE
+    // CHANGE START HERE
 
-    /* Example 1
     if (input.src.devDependencies && input.src.devDependencies.length !== 0) {
         const dependencies = Object.keys(input.src.devDependencies);
         return (
@@ -30,24 +29,6 @@ const Visualizer = (input) => {
             </React.Fragment>
         )
     }
-    */
-
-    /* Example 2 
-    // console.log(input.src);
-    if (input.src && input.src.length !== 0) {
-        return (
-            <React.Fragment>
-                <ul>
-                    {
-                        input.src.map((item, index) => {
-                            return <li key={index}>{item['ssh_url']}</li>
-                        })
-                    }
-                </ul>
-            </React.Fragment>
-        )
-    }
-    */
 
     // CHANGE END HERE
     return (

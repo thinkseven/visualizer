@@ -4,16 +4,22 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     // https://reactjs.org/docs/cross-origin-errors.html
     devtool: 'cheap-module-source-map',
-    entry: process.env['SIMULATOR'] === 'false' ? './src/index.js' : './src/index-start.js',
+    entry: {
+        github: './entries/github.js',
+        package: './entries/package.js',
+        main: './entries/main.js',
+        /* introduce more entries */
+    },
     output: {
-        filename: 'visualizer.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'build')
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html',
             title: 'Json Visualizer - Postman Sandbox',
-            hash: false
+            hash: false,
+            chunks: ['main']
         })
     ],
     resolve: {
