@@ -1,4 +1,12 @@
 node_modules
 build
+
 src/components/ignore/**/*.*
+src/components/mapping/domains/ignore/**/*.*
+src/components/mapping/sample/ignore/**/*.*
 entries/ignore/**/*.*
+
+!src/components/mapping/domains/ignore/**/README.md
+!src/components/mapping/sample/ignore/**/README.md
+!src/components/ignore/**/README.md
+!entries/ignore/README.md

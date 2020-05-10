@@ -1,0 +1,20 @@
+{
+  "name": {
+    "firstName": [
+      "firstName",
+      "person.firstName"
+    ],
+    "lastName": [
+      "lastName",
+      "person.lastName"
+    ]
+  },
+  "dateOfBirth": [
+    "dateOfBirth",
+    "person.dateOfBirth"
+  ],
+  "email": [
+    "email",
+    "person.email"
+  ]
+}
