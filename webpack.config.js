@@ -8,7 +8,8 @@ module.exports = {
         github: './entries/github.js',
         package: './entries/package.js',
         main: './entries/main.js',
-        mapper: './entries/mapper.js'
+        mapper: './entries/mapper.js',
+        /* introduce more entries */
     },
     output: {
         filename: '[name].js',
